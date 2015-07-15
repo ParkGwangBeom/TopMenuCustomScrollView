@@ -15,7 +15,6 @@
 		3B5986311B55F49D003AEC86 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B59862F1B55F49D003AEC86 /* LaunchScreen.xib */; };
 		3B59863D1B55F49D003AEC86 /* TopScrollTEstTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B59863C1B55F49D003AEC86 /* TopScrollTEstTests.m */; };
 		3B5986481B55F4FF003AEC86 /* TopMenuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */; };
-		3B59864B1B55F837003AEC86 /* UIImage+Stretch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */; };
 		3B59864D1B5633CC003AEC86 /* underline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B59864C1B5633CC003AEC86 /* underline@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +44,6 @@
 		3B59863C1B55F49D003AEC86 /* TopScrollTEstTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopScrollTEstTests.m; sourceTree = "<group>"; };
 		3B5986461B55F4FF003AEC86 /* TopMenuScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuScrollView.h; sourceTree = "<group>"; };
 		3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuScrollView.m; sourceTree = "<group>"; };
-		3B5986491B55F837003AEC86 /* UIImage+Stretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Stretch.h"; sourceTree = "<group>"; };
-		3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Stretch.m"; sourceTree = "<group>"; };
 		3B59864C1B5633CC003AEC86 /* underline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "underline@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				3B59864C1B5633CC003AEC86 /* underline@2x.png */,
-				3B5986491B55F837003AEC86 /* UIImage+Stretch.h */,
-				3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */,
 				3B5986461B55F4FF003AEC86 /* TopMenuScrollView.h */,
 				3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */,
 				3B5986241B55F49D003AEC86 /* AppDelegate.h */,
@@ -236,7 +231,6 @@
 				3B5986481B55F4FF003AEC86 /* TopMenuScrollView.m in Sources */,
 				3B5986291B55F49D003AEC86 /* ViewController.m in Sources */,
 				3B5986261B55F49D003AEC86 /* AppDelegate.m in Sources */,
-				3B59864B1B55F837003AEC86 /* UIImage+Stretch.m in Sources */,
 				3B5986231B55F49D003AEC86 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

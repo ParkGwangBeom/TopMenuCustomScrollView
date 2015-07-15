@@ -7,7 +7,6 @@
 //
 
 #import "TopMenuScrollView.h"
-#import "UIImage+Stretch.h"
 
 #define kIntroMarginW 0
 #define kViewCenterX 160.0f
