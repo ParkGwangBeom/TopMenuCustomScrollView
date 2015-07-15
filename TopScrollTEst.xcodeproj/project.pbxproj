@@ -14,6 +14,8 @@
 		3B59862E1B55F49D003AEC86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B59862D1B55F49D003AEC86 /* Images.xcassets */; };
 		3B5986311B55F49D003AEC86 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B59862F1B55F49D003AEC86 /* LaunchScreen.xib */; };
 		3B59863D1B55F49D003AEC86 /* TopScrollTEstTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B59863C1B55F49D003AEC86 /* TopScrollTEstTests.m */; };
+		3B5986481B55F4FF003AEC86 /* TopMenuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */; };
+		3B59864B1B55F837003AEC86 /* UIImage+Stretch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		3B5986361B55F49D003AEC86 /* TopScrollTEstTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopScrollTEstTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B59863B1B55F49D003AEC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B59863C1B55F49D003AEC86 /* TopScrollTEstTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopScrollTEstTests.m; sourceTree = "<group>"; };
+		3B5986461B55F4FF003AEC86 /* TopMenuScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuScrollView.h; sourceTree = "<group>"; };
+		3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuScrollView.m; sourceTree = "<group>"; };
+		3B5986491B55F837003AEC86 /* UIImage+Stretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Stretch.h"; sourceTree = "<group>"; };
+		3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Stretch.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,10 @@
 		3B59861F1B55F49D003AEC86 /* TopScrollTEst */ = {
 			isa = PBXGroup;
 			children = (
+				3B5986491B55F837003AEC86 /* UIImage+Stretch.h */,
+				3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */,
+				3B5986461B55F4FF003AEC86 /* TopMenuScrollView.h */,
+				3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */,
 				3B5986241B55F49D003AEC86 /* AppDelegate.h */,
 				3B5986251B55F49D003AEC86 /* AppDelegate.m */,
 				3B5986271B55F49D003AEC86 /* ViewController.h */,
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5986481B55F4FF003AEC86 /* TopMenuScrollView.m in Sources */,
 				3B5986291B55F49D003AEC86 /* ViewController.m in Sources */,
 				3B5986261B55F49D003AEC86 /* AppDelegate.m in Sources */,
+				3B59864B1B55F837003AEC86 /* UIImage+Stretch.m in Sources */,
 				3B5986231B55F49D003AEC86 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
