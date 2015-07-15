@@ -9,7 +9,7 @@
 #import "TopMenuScrollView.h"
 
 #define kIntroMarginW 0
-#define kViewCenterX 160.0f
+#define kViewCenterX self.center.x
 #define kDefaultEdgeInsets UIEdgeInsetsMake(6, 12, 6, 12)
 
 @interface TopMenuScrollView (){
@@ -35,6 +35,7 @@
         
         [self settingScroll];
     }
+    
     return self;
 }
 
@@ -43,10 +44,11 @@
     self.scrollsToTop = NO;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
-    self.pagingEnabled = YES;
+    self.pagingEnabled = NO;
     self.bounces = YES;
     
-    arr_Button = [[NSMutableArray alloc]init];
+    if(arr_Button == nil)
+        arr_Button = [[NSMutableArray alloc]init];
 }
 
 + (CGFloat)widthForMenuTitle:(NSString *)title buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets
@@ -110,15 +112,15 @@
     }];
     
     CGFloat btnX = btn.frame.origin.x;
-    CGFloat btnRight = btnX + btn.frame.size.width;
+    CGFloat btnCenterX = btn.center.x;
     CGPoint scrollPoint;
     
     /* Setting Scroll Center Point*/
-    if(btnX > kViewCenterX && self.contentSize.width - btnRight > kViewCenterX){
-        scrollPoint = CGPointMake(btnX - kViewCenterX, 0.0f);
-    }else if(self.contentSize.width - btnRight < kViewCenterX){
+    if(btnCenterX > kViewCenterX && self.contentSize.width + kViewCenterX - self.frame.size.width > btnCenterX){
+        scrollPoint = CGPointMake(btnX - kViewCenterX + (btn.frame.size.width/2), 0.0f);
+    }else if(self.contentSize.width + kViewCenterX - self.frame.size.width < btnCenterX){
         scrollPoint = CGPointMake(self.contentSize.width - self.bounds.size.width,0.0f);
-    }else if(btnX < kViewCenterX){
+    }else if(btnCenterX < kViewCenterX){
         scrollPoint = CGPointMake(0.0f,0.0f);
     }
     [self setContentOffset:scrollPoint animated:YES];
