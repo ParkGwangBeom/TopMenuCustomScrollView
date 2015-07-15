@@ -1,6 +1,6 @@
 //
 //  TopMenuScrollView.m
-//  TopScrollTEst
+//  TopMenuScrollView
 //
 //  Created by 박광범 on 2015. 7. 15..
 //  Copyright (c) 2015년 Yellomobile. All rights reserved.
@@ -64,6 +64,7 @@
 
 -(void)calcurateWidth:(NSArray *)menuList buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets{
     [self clearView];
+    
     arrCount = menuList.count;
     __block CGFloat buttonHeight = self.frame.size.height;
     __block CGFloat cWidth = 0.0f;
@@ -74,14 +75,12 @@
         
         CGFloat buttonWidth = [TopMenuScrollView widthForMenuTitle:tagTitle buttonEdgeInsets:buttonEdgeInsets];
         
-        CGRect buttonFrame = CGRectMake(0.0f, 0.0f, buttonWidth, buttonHeight);
-        
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(cWidth, 0.0f, buttonWidth, buttonHeight);
         [button setTitle:tagTitle forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:10.0f];
-        [button setBackgroundImage:[TopMenuScrollView imageWithColor:[UIColor blackColor] RectMake:buttonFrame].centerStretchableImage forState:UIControlStateNormal];
-        [button setBackgroundImage:[TopMenuScrollView imageWithColor:[UIColor redColor] RectMake:buttonFrame].centerStretchableImage forState:UIControlStateSelected];
+//        [button setBackgroundImage:[TopMenuScrollView imageWithColor:[UIColor blackColor] RectMake:buttonFrame].centerStretchableImage forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"underline.png"] forState:UIControlStateSelected];
         [button setTitleColor:[UIColor colorWithRed:133.0f/255.0f green:133.0f/255.0f blue:133.0f/0xff alpha:1.0f] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -136,20 +135,6 @@
 #pragma mark - Page Change
 -(void)setScrollPage:(NSInteger)page{
     [self buttonPressed:arr_Button[page]];
-}
-
-
-//필요없는 코드
-+ (UIImage *)imageWithColor:(UIColor *)color RectMake:(CGRect)Cgrect
-{
-    CGRect rect = Cgrect;
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
 }
 
 @end

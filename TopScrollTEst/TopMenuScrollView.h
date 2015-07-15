@@ -1,18 +1,17 @@
 //
 //  TopMenuScrollView.h
-//  TopScrollTEst
+//  TopMenuScrollView
 //
-//  Created by yellomobile on 2015. 7. 15..
-//  Copyright (c) 2015년 yellomobile. All rights reserved.
+//  Created by 박광범 on 2015. 7. 15..
+//  Copyright (c) 2015년 Yellomobile. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @protocol TopMenuDelegate <NSObject>
 
-@required
-
 @optional
+/* ScrollView Menu Button Click Delegate */
 -(void)selectTopMenu:(NSInteger)tagId;
 @end
 
@@ -26,7 +25,7 @@
 - (void)calcurateWidth:(NSArray *)menuList buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets;
 - (void)clearView;
 
-/* 페이지 이동했을 시 메뉴버튼 위치 이동하는 메소드 */
+/* Page Change Top Menu  */
 -(void)setScrollPage:(NSInteger)page;
 
 @end

@@ -10,10 +10,12 @@
 
 #import "TopMenuScrollView.h"
 
-@interface ViewController ()<TopMenuDelegate>{
+@interface ViewController ()<TopMenuDelegate, UIScrollViewDelegate>{
     NSArray *arr;
+    UILabel *label;
 }
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scr_View;
 @property (weak, nonatomic) IBOutlet TopMenuScrollView *TopMenuView;
 @property (weak, nonatomic) IBOutlet UILabel *lb_Count;
 
@@ -24,41 +26,52 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
     NSDictionary *dicName = @{
-                              @"name" : @"바보"
+                              @"name" : @"Call"
                               };
     NSDictionary *dicName1 = @{
-                              @"name" : @"메롱"
-                              };
+                               @"name" : @"Name"
+                               };
     NSDictionary *dicName2 = @{
-                              @"name" : @"헤헤헤헤"
-                              };
+                               @"name" : @"Frame"
+                               };
     NSDictionary *dicName3 = @{
-                              @"name" : @"그렇다용"
-                              };
+                               @"name" : @"ScrollView"
+                               };
     NSDictionary *dicName4 = @{
-                              @"name" : @"크크크"
-                              };
+                               @"name" : @"Delegate"
+                               };
     NSDictionary *dicName5 = @{
-                              @"name" : @"zpzpzp"
-                              };
+                               @"name" : @"BringBring"
+                               };
     NSDictionary *dicName6 = @{
-                              @"name" : @"헤헤헤"
-                              };
+                               @"name" : @"Coffee"
+                               };
     NSDictionary *dicName7 = @{
-                               @"name" : @"니들이개맛을알아"
+                               @"name" : @"iPhone"
                                };
     NSDictionary *dicName8 = @{
-                               @"name" : @"그놈에개맛"
+                               @"name" : @"MacBook"
                                };
     NSDictionary *dicName9 = @{
-                               @"name" : @"지겹다지겨워"
+                               @"name" : @"Wallet"
                                };
     arr = @[dicName, dicName1, dicName2, dicName3,dicName4,dicName5,dicName6,dicName7,dicName8,dicName9];
     
     self.TopMenuView.topMenuDelegate = self;
     [self.TopMenuView calcurateWidth:arr];
+    
+    [self.scr_View setContentSize:CGSizeMake(self.view.frame.size.width * arr.count, self.scr_View.frame.size.height)];
+    
+    [arr enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        label = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width * idx, 200.0f, 200.0f, 20.0f)];
+        label.font = [UIFont systemFontOfSize:10.0f];
+        [label setBackgroundColor:[UIColor redColor]];
+        label.text = arr[idx][@"name"];
+        [label sizeToFit];
+        [self.scr_View addSubview:label];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,11 +81,13 @@
 
 #pragma mark - TopMenuDelegate
 -(void)selectTopMenu:(NSInteger)tagId{
-    self.lb_Count.text = arr[tagId][@"name"];
-//    [self.lb_Count sizeToFit];
+    [self.scr_View setContentOffset:CGPointMake(self.view.frame.size.width * tagId, 0.0f) animated:YES];
 }
-- (IBAction)btntouch:(id)sender {
-    [self.TopMenuView setScrollPage:7];
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    float f_OffsetX = self.scr_View.contentOffset.x;
+    NSInteger page = f_OffsetX/320;
+    [self.TopMenuView setScrollPage:page];
 }
 
 @end

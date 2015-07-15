@@ -16,6 +16,7 @@
 		3B59863D1B55F49D003AEC86 /* TopScrollTEstTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B59863C1B55F49D003AEC86 /* TopScrollTEstTests.m */; };
 		3B5986481B55F4FF003AEC86 /* TopMenuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */; };
 		3B59864B1B55F837003AEC86 /* UIImage+Stretch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */; };
+		3B59864D1B5633CC003AEC86 /* underline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B59864C1B5633CC003AEC86 /* underline@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		3B5986471B55F4FF003AEC86 /* TopMenuScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuScrollView.m; sourceTree = "<group>"; };
 		3B5986491B55F837003AEC86 /* UIImage+Stretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Stretch.h"; sourceTree = "<group>"; };
 		3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Stretch.m"; sourceTree = "<group>"; };
+		3B59864C1B5633CC003AEC86 /* underline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "underline@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		3B59861F1B55F49D003AEC86 /* TopScrollTEst */ = {
 			isa = PBXGroup;
 			children = (
+				3B59864C1B5633CC003AEC86 /* underline@2x.png */,
 				3B5986491B55F837003AEC86 /* UIImage+Stretch.h */,
 				3B59864A1B55F837003AEC86 /* UIImage+Stretch.m */,
 				3B5986461B55F4FF003AEC86 /* TopMenuScrollView.h */,
@@ -211,6 +214,7 @@
 			files = (
 				3B59862C1B55F49D003AEC86 /* Main.storyboard in Resources */,
 				3B5986311B55F49D003AEC86 /* LaunchScreen.xib in Resources */,
+				3B59864D1B5633CC003AEC86 /* underline@2x.png in Resources */,
 				3B59862E1B55F49D003AEC86 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
