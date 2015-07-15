@@ -13,7 +13,6 @@
 #define kDefaultEdgeInsets UIEdgeInsetsMake(6, 12, 6, 12)
 
 @interface TopMenuScrollView (){
-    NSInteger arrCount;
     NSMutableArray *arr_Button;
 }
 
@@ -64,7 +63,6 @@
 -(void)calcurateWidth:(NSArray *)menuList buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets{
     [self clearView];
     
-    arrCount = menuList.count;
     __block CGFloat buttonHeight = self.frame.size.height;
     __block CGFloat cWidth = 0.0f;
     
