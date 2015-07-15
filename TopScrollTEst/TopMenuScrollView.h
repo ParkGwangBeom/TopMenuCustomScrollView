@@ -26,4 +26,7 @@
 - (void)calcurateWidth:(NSArray *)menuList buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets;
 - (void)clearView;
 
+/* 페이지 이동했을 시 메뉴버튼 위치 이동하는 메소드 */
+-(void)setScrollPage:(NSInteger)page;
+
 @end

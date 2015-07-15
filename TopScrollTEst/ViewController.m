@@ -10,9 +10,12 @@
 
 #import "TopMenuScrollView.h"
 
-@interface ViewController ()<TopMenuDelegate>
+@interface ViewController ()<TopMenuDelegate>{
+    NSArray *arr;
+}
 
 @property (weak, nonatomic) IBOutlet TopMenuScrollView *TopMenuView;
+@property (weak, nonatomic) IBOutlet UILabel *lb_Count;
 
 @end
 
@@ -52,7 +55,7 @@
     NSDictionary *dicName9 = @{
                                @"name" : @"지겹다지겨워"
                                };
-    NSArray *arr = @[dicName, dicName1, dicName2, dicName3,dicName4,dicName5,dicName6,dicName7,dicName8,dicName9];
+    arr = @[dicName, dicName1, dicName2, dicName3,dicName4,dicName5,dicName6,dicName7,dicName8,dicName9];
     
     self.TopMenuView.topMenuDelegate = self;
     [self.TopMenuView calcurateWidth:arr];
@@ -65,7 +68,11 @@
 
 #pragma mark - TopMenuDelegate
 -(void)selectTopMenu:(NSInteger)tagId{
-    NSLog(@"%ld",tagId);
+    self.lb_Count.text = arr[tagId][@"name"];
+//    [self.lb_Count sizeToFit];
+}
+- (IBAction)btntouch:(id)sender {
+    [self.TopMenuView setScrollPage:7];
 }
 
 @end

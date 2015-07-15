@@ -133,6 +133,10 @@
     }
 }
 
+#pragma mark - Page Change
+-(void)setScrollPage:(NSInteger)page{
+    [self buttonPressed:arr_Button[page]];
+}
 
 
 //필요없는 코드
