@@ -26,6 +26,4 @@
 - (void)calcurateWidth:(NSArray *)menuList buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets;
 - (void)clearView;
 
-+ (CGFloat)widthForTagInfoTitle:(NSString *)title buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets;
-
 @end

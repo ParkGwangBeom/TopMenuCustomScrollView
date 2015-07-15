@@ -10,6 +10,7 @@
 #import "UIImage+Stretch.h"
 
 #define kIntroMarginW 0
+#define kViewCenterX 160.0f
 #define kDefaultEdgeInsets UIEdgeInsetsMake(6, 12, 6, 12)
 
 @interface TopMenuScrollView (){
@@ -50,7 +51,7 @@
     arr_Button = [[NSMutableArray alloc]init];
 }
 
-+ (CGFloat)widthForTagInfoTitle:(NSString *)title buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets
++ (CGFloat)widthForMenuTitle:(NSString *)title buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets
 {
     CGSize size = [title sizeWithFont:[UIFont systemFontOfSize:10.0f]];
     return CGSizeMake(size.width + buttonEdgeInsets.left + buttonEdgeInsets.right, size.height + buttonEdgeInsets.top + buttonEdgeInsets.bottom).width;
@@ -71,7 +72,7 @@
         NSString *tagTitle = menu[@"name"];
         //        NSInteger tagID = [menu[@"id"] integerValue];
         
-        CGFloat buttonWidth = [TopMenuScrollView widthForTagInfoTitle:tagTitle buttonEdgeInsets:buttonEdgeInsets];
+        CGFloat buttonWidth = [TopMenuScrollView widthForMenuTitle:tagTitle buttonEdgeInsets:buttonEdgeInsets];
         
         CGRect buttonFrame = CGRectMake(0.0f, 0.0f, buttonWidth, buttonHeight);
         
@@ -117,11 +118,11 @@
     CGPoint scrollPoint;
     
     /* Setting Scroll Center Point*/
-    if(btnX > 160 && self.contentSize.width - btnRight > 160){
-        scrollPoint = CGPointMake(btnX - 160.0f, 0.0f);
-    }else if(self.contentSize.width - btnRight < 160){
+    if(btnX > kViewCenterX && self.contentSize.width - btnRight > kViewCenterX){
+        scrollPoint = CGPointMake(btnX - kViewCenterX, 0.0f);
+    }else if(self.contentSize.width - btnRight < kViewCenterX){
         scrollPoint = CGPointMake(self.contentSize.width - self.bounds.size.width,0.0f);
-    }else if(btnX < 160){
+    }else if(btnX < kViewCenterX){
         scrollPoint = CGPointMake(0.0f,0.0f);
     }
     [self setContentOffset:scrollPoint animated:YES];
