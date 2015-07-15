@@ -23,7 +23,7 @@
 
 - (id)initWithFrame:(CGRect)frame delegate:(id<TopMenuDelegate>)delegate;
 - (void)calcurateWidth:(NSArray *)menuList;
--(void)calcurateWidth:(NSArray *)menuList buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets;
+- (void)calcurateWidth:(NSArray *)menuList buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets;
 - (void)clearView;
 
 + (CGFloat)widthForTagInfoTitle:(NSString *)title buttonEdgeInsets:(UIEdgeInsets)buttonEdgeInsets;

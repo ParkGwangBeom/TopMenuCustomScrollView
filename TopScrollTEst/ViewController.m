@@ -11,6 +11,7 @@
 #import "TopMenuScrollView.h"
 
 @interface ViewController ()<TopMenuDelegate>
+
 @property (weak, nonatomic) IBOutlet TopMenuScrollView *TopMenuView;
 
 @end
@@ -62,7 +63,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - TopMenuDelegate
 -(void)selectTopMenu:(NSInteger)tagId{
     NSLog(@"%ld",tagId);
 }
+
 @end
