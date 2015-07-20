@@ -79,15 +79,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - TopMenuDelegate
--(void)selectTopMenu:(NSInteger)tagId{
-    [self.scr_View setContentOffset:CGPointMake(self.view.frame.size.width * tagId, 0.0f) animated:YES];
-}
-
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     float f_OffsetX = self.scr_View.contentOffset.x;
     NSInteger page = f_OffsetX/self.view.frame.size.width;
     [self.TopMenuView setScrollPage:page];
+}
+
+#pragma mark - TopMenuDelegate
+-(void)selectTopMenu:(NSInteger)tagId{
+    [self.scr_View setContentOffset:CGPointMake(self.view.frame.size.width * tagId, 0.0f) animated:YES];
 }
 
 @end

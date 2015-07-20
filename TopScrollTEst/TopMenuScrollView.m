@@ -108,6 +108,7 @@
     UIButton *btn = (UIButton *)sender;
     
     [arr_Button enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        // Button Selected
         obj.selected = (btn.tag == idx);
     }];
     
@@ -115,7 +116,7 @@
     CGFloat btnCenterX = btn.center.x;
     CGPoint scrollPoint;
     
-    /* Setting Scroll Center Point*/
+    /* Setting Scroll Center Point */
     if(btnCenterX > kViewCenterX && self.contentSize.width + kViewCenterX - self.frame.size.width > btnCenterX){
         scrollPoint = CGPointMake(btnX - kViewCenterX + (btn.frame.size.width/2), 0.0f);
     }else if(self.contentSize.width + kViewCenterX - self.frame.size.width < btnCenterX){
@@ -126,7 +127,7 @@
     [self setContentOffset:scrollPoint animated:YES];
     
     /* Call Delegate */
-    if([self.topMenuDelegate respondsToSelector:@selector(selectTopMenu:)]){
+    if(self.topMenuDelegate && [self.topMenuDelegate respondsToSelector:@selector(selectTopMenu:)]){
         [self.topMenuDelegate selectTopMenu:btn.tag];
     }
 }
