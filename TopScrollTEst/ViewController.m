@@ -86,7 +86,7 @@
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     float f_OffsetX = self.scr_View.contentOffset.x;
-    NSInteger page = f_OffsetX/320;
+    NSInteger page = f_OffsetX/self.view.frame.size.width;
     [self.TopMenuView setScrollPage:page];
 }
 

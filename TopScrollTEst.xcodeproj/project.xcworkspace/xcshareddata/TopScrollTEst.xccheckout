@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7D13CD3B-68CD-43D7-B8D7-A85B93FED57D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TopScrollTEst</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F6E87A4BCF74738C00C8BE366AB6DA40EE78B956</key>
 		<string>https://github.com/ParkGwangBeom/TopMenuCustomScrollView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TopScrollTEst.xcodeproj/project.xcworkspace</string>
+	<string>TopScrollTEst.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F6E87A4BCF74738C00C8BE366AB6DA40EE78B956</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>F6E87A4BCF74738C00C8BE366AB6DA40EE78B956</string>
 			<key>IDESourceControlWCCName</key>
-			<string>TopScrollTEst</string>
+			<string>TopMenuCustomScrollView</string>
 		</dict>
 	</array>
 </dict>
